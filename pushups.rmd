@@ -35,13 +35,31 @@ by examining the variables we observed the problems type is numerical - categori
 
 ### Graphical Descriptive Results
 
+```{r}
+plot(pushups~position,data=pushups)
+```
+
+Visually observing the boxplot the upper limit of the player is close tot the bottom 25% of the skill player and they can do much more than the line players.
+
 <!--Graphical results here. Make sure to show your code. Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too. Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
 
+```{r}
+favstats(pushups~position,data=pushups)
+```
+
+We see the mean of the line players is 17 and that the mean of skill player is 49 which is about three times as big.  
+
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
+
+```{r}
+t.test(pushups~position,data=pushups)
+```
+
+the p-value is 0.000009421 is a very small number and this is way smaller than 0.05. Therefore we reject the null hypothesis.  
 
 <!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
